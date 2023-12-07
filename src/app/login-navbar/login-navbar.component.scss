@@ -1,0 +1,95 @@
+.nav-text{
+    color: rgba(2, 2, 2, 0.80);
+    font-family: Switzer;
+    // font-size: 50px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: transform 0.1s ease-in-out;
+   
+}
+.nav-edit{
+  display: flex;
+  justify-content: space-around;
+
+}
+.line{
+    border-right: 1px solid rgb(161, 158, 158);
+  
+}
+
+.nav-text-lg {
+    font-size: 30px; /* Large font size for larger screens */
+  }
+  
+  .text-res {
+    font-size: 25px; /* Smaller font size for smaller screens */
+  } 
+  a:hover {
+   text-decoration: 4px underline #0077B6;
+   animation: bounce 0.5s infinite alternate;
+   transition: .4s;
+  }
+
+
+
+
+
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+  
+
+
+
+
+
+
+
+  @media (max-width: 768px) {
+    .nav-text-lg {
+      font-size: 10px; /* Adjust as needed for medium screens */
+
+    }
+    .line{
+      border-right: 1px solid rgb(161, 158, 158);
+      margin-left: 7px;
+    }
+  }
+  @media (max-width: 850px) {
+    // .nav-text-lg {
+    //   font-size: 25px; /* Adjust as needed for medium screens */
+
+    // }
+    .line{
+      border-right: 1px solid rgb(161, 158, 158);
+      margin-left: 7px;
+
+    }
+  }
+
+
+
+  @media only screen and (min-width: 601px) {
+    .text-res {
+      font-size: 40px;
+    }
+  }
+  
+  /* If the screen size is 600px or less, set the font-size of <div> to 30px */
+  @media only screen and (max-width: 600px) {
+    .text-res {
+      font-size: 18px;
+      
+    }
+    .line{
+      margin-left: 2px;
+    }
+  }
+  
