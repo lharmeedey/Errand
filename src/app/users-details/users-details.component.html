@@ -14,10 +14,21 @@
         <div>
             <p>Info</p>
         </div>
+        <div class="d-flex" >
         <div class="icon-edit-cont ">
-            <i class='bx bx-message-rounded-detail icon-edit rounded' ></i>
+            
+                <a routerLink="/map" routerLinkActive="active"><i class='bx bxs-map icon-edit'></i></a>
+          
         </div>
+
+        <div class="icon-edit-cont">
+            
         
+      
+            <i class='bx bx-message-rounded-detail icon-edit' ></i>
+        </div>
+        </div>
+
         
     </header>
     <div class="bg-img">
@@ -61,13 +72,43 @@
 
     <ul class="d-flex share p-3">
         <li>
-            <a routerLink="/" routerLinkActive="active"> More Info</a>
+            <a (click)="toggleDivVisibility()"> More Info</a>
         </li>
         <li>
-            <a routerLink="/" routerLinkActive="active">Reviews</a>
+            <a  (click)="toggleDivVisibility()">Reviews</a>
         </li>
     </ul>  
-    <div class="line"></div>
+    <div class="share profile_details">
+    <div *ngIf="isFirstDivVisible" id="more" class="more_info">
+        <span class="sub_more_info">Away From you</span> 
+        <span class="sub_num">2.3 km</span>
+        <span class="sub_num">144, Herbert Macaulay Road, 
+            Lagos Island.
+        </span>
+        <span class="sub_more_info">Experience</span>
+        <span class="sub_num">7 months</span>
+        <span class="sub_more_info">Height</span>
+        <span class="sub_num">6.1 ft</span>
+        <span class="sub_more_info">Others</span>
+        <span class="sub_num">Tall, chubby, handsome</span>
+    </div>
+    <div *ngIf="!isFirstDivVisible" id="rev" class="review">
+        <button class="rev_btn">Last week<i class='bx bxs-chevron-down'></i></button>
+        <span class="sub_more_info">Adam Adam</span> 
+        <span class="sub_num">Yinka is an awesome man. He’s really quick when it comes 
+            to running errands. I highly recommend him. You’re most 
+            welcome!
+        </span>
+        <span class="sub_more_info">Adam Adam</span> 
+        <span class="sub_num">Yinka is an awesome man. He’s really quick when it comes 
+            to running errands. I highly recommend him. You’re most 
+            welcome!
+        </span>
+   
+
+    </div>
+ </div>
+   
 
 </body>
 </html>

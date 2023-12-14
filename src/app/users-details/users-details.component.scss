@@ -7,7 +7,6 @@ body{
     width: 100%;
     height: 90%;
     background:  #A79D9C33;
-    ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,21 +19,34 @@ body{
 }
 
 .share{
-    justify-content: space-between;
-}
-.icon-edit-cont{
-    border-radius: 50%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 5px;
-    height: 20%;
-    background: #E5F1F8;
 }
+// .icon-edit-cont{
+//     border-radius: 50%;
+//     // display: flex;
+//     align-items: center;
+//     // padding: 5px;
+//     // height: 40%;
+//     background: #E5F1F8;
+//     margin: 10px;
+//     width: 100%;
+// }
 
 .icon-edit{
     text-align: center;
-    font-size: 23px;
+    font-size: 20px;
     color: #2D8EC3;
+    background: #E5F1F8;
+    margin: 4px;
+    width: 90%;
+    padding: 7px;
+    border-radius: 50%;
+    align-self: center;
+
+
+
     
 }
 
@@ -42,10 +54,14 @@ body{
     background: #3293C5;
     color: #fff;
 }
+ul{
+    border-bottom: solid 0.1px rgb(160, 159, 159);
+}
 
 ul li {
     list-style: none;
     font-size: 20px;
+ 
 }
 li:hover{
     text-decoration: 2px underline #0077B6;
@@ -62,4 +78,40 @@ a:hover{
     animation: bounce 0.5s infinite alternate;
     transition: .4s;
     color: #808080;
+}
+.more_info{
+    display: block;
+}
+.sub_more_info{
+    display: block;
+    font-family: Switzer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    padding-top: 7px;
+
+}
+.sub_num{
+    display: block;
+    font-family: Switzer;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #808080;
+
+}
+.rev_btn{
+    border: 0.1px solid;
+    outline: none;
+    font-size: 10px;
+    padding: 2px 8px 2px 8px;
+    border-radius: 15px;
+    background: none;
+    display: block;
+    margin: auto;
+    cursor: pointer;
 }

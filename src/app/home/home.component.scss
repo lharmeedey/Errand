@@ -2,15 +2,32 @@ input{
   border: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  padding-left: 30px;
 }
-input:focus{
-  border: 1px solid #ccc !important;
+input:focus{ 
+  // border: 1px solid #ccc;
   transition: border 0.3s; 
+
+  outline: solid 2.5px red !important;
+  border: solid 2.5px red !important;
+  
+}
+input:active{
+  border: solid 2.5px red !important;
+  outline: solid 2.5px red !important;
+}
+.moved-svg {
+  // transform: translate(20px, -42px); /* Move the SVG 50 pixels to the right and down */
+  display: block;
+  position: absolute;
+  top: 10.5%;
+  left: 6% ;
+  
+}
+input:placeholder-shown input{
+background: red;
 }
 
-.moved-svg {
-  transform: translate(20px, -42px); /* Move the SVG 50 pixels to the right and down */
-}
 
 ::placeholder{
   font-family: Switzer;

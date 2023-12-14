@@ -1,0 +1,45 @@
+<header class="d-flex share">
+
+    <div>
+        <p class="first_txt">Chat</p>
+    </div>
+
+    <div class="icon-edit-cont">
+        <a routerLink="/chat" routerLinkActive="active">
+            <i class='bx bx-message-rounded-detail icon-edit'></i>
+        </a>
+    </div>
+   
+</header>
+<div class="chat_container">
+    <div class="chat_child"></div>
+    <div class="chat_second_child"></div>
+</div>
+
+
+<div class="chat-container">
+    <div class="user-chat" *ngFor="let messages of [user1Messages, user2Messages]; let i = index">
+      <div class="messages">
+        <p class="chat_child" *ngFor="let message of messages">{{ message }}</p>
+      </div>
+      <div class="input-container">
+        <input [(ngModel)]="newMessage" placeholder="Type your message..." />
+        <button (click)="sendMessage(i + 1)">Send</button>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <div class="chat-container">
+    <div class="user-chat" *ngFor="let messages of [user1Messages, user2Messages]; let i = index">
+      <div class="messages">
+        <div *ngFor="let message of messages">{{ message }}</div>
+      </div>
+      <div class="input-container">
+        <input [(ngModel)]="newMessage" placeholder="Type your message..." />
+        <button (click)="sendMessage(i + 1)">Send</button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { style } from '@angular/animations';
+import { Component, Renderer2, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-users-details',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./users-details.component.scss']
 })
 export class UsersDetailsComponent {
+  isFirstDivVisible: boolean = true;
 
+  toggleDivVisibility() {
+    this.isFirstDivVisible = !this.isFirstDivVisible;
+  }
 }
