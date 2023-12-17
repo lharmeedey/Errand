@@ -17,29 +17,16 @@
 </div>
 
 
-<div class="chat-container">
-    <div class="user-chat" *ngFor="let messages of [user1Messages, user2Messages]; let i = index">
-      <div class="messages">
-        <p class="chat_child" *ngFor="let message of messages">{{ message }}</p>
-      </div>
-      <div class="input-container">
-        <input [(ngModel)]="newMessage" placeholder="Type your message..." />
-        <button (click)="sendMessage(i + 1)">Send</button>
-      </div>
-    </div>
+  <div >
+    <p class="messages" *ngFor="let message of messages">{{ message }}</p>
   </div>
+  <div class="input-container">
+    <input [(ngModel)]="newMessage" placeholder="Type your message..." />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+
+
+
+
   
-
-
-  <div class="chat-container">
-    <div class="user-chat" *ngFor="let messages of [user1Messages, user2Messages]; let i = index">
-      <div class="messages">
-        <div *ngFor="let message of messages">{{ message }}</div>
-      </div>
-      <div class="input-container">
-        <input [(ngModel)]="newMessage" placeholder="Type your message..." />
-        <button (click)="sendMessage(i + 1)">Send</button>
-      </div>
-    </div>
-  </div>
   

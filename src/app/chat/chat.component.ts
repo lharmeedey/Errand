@@ -6,8 +6,7 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent {
-  user1Messages: string[] = [];
-  user2Messages: string[] = [];
+ messages: string[] = [];
   newMessage: string = '';
 
   constructor() { }
@@ -16,14 +15,11 @@ export class ChatComponent {
     // Initialize messages or load from a service
   }
 
-  sendMessage(user: number) {
+  sendMessage() {
     if (this.newMessage.trim() !== '') {
-      if (user === 1) {
-        this.user1Messages.push(this.newMessage);
-      } else if (user === 2) {
-        this.user2Messages.push(this.newMessage);
-      }
+      this.messages.push(this.newMessage);
       this.newMessage = '';
     }
   }
+  
 }

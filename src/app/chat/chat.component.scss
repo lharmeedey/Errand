@@ -60,33 +60,48 @@
 
 /* chat.component.css */
 
-.chat-container {
-    display: flex;
-    justify-content: space-between;
-  }
+// .chat-container {
+//     display: flex;
+//     justify-content: space-between;
+//   }
   
   .user-chat {
-    width: 48%; /* Adjust the width as needed */
+    outline: 1px solid blue;
+    display: inline-block;
     border: 1px solid #ccc;
     padding: 10px;
     margin: 5px;
     text-align: left;
+    background: yellow;
   }
   
   .messages {
-    max-height: 200px;
-    overflow-y: auto;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+    // max-height: 200px;
+    // overflow-y: auto;
+    // border-bottom: 1px solid #ddd;
+    // text-align: left;
+    // background: red;
+    // padding: 10px;
+    // border-radius: 20%;
+    display: inline-block;
+    justify-content: baseline;
+    align-items: flex-start;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ff9999; /* Red background color */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
   }
   
   .input-container {
-    display: flex;
+    // display: block;
     margin-top: 10px;
   }
   
   .input-container input {
-    flex: 1;
+    // flex: 1;
     padding: 5px;
     margin-right: 5px;
   }
